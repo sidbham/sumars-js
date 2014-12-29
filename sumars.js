@@ -115,14 +115,14 @@ module.exports.signup = function (req, callback) {
         var smtpTransport = nodemailer.createTransport("SMTP", {
             service: "Gmail",
             auth: {
-                user: "sidbham@gmail.com",
-                pass: "23TYvsoh"
+                user: "user@gmail.com",
+                pass: "password"
             }
         });
 
         smtpTransport.sendMail({
-            from: "Sid <sidbham@gmail.com>", // sender address
-            to: "User <s.i.d@hotmail.com>", // comma separated list of receivers
+            from: "name <email@email.com>", // sender address
+            to: "User <user@email.com>", // comma separated list of receivers
             subject: "Registration Token ✔", // Subject line
             text: token // plaintext body
         }, function (error, response) {
